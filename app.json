@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "Mike",
+    "slug": "mikevt",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.miketienovenorg.mikevt"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.miketienovenorg.mikevt"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +33,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8134d887-9ec6-4a36-bc30-76aaf1de2c46"
+      }
+    },
+    "owner": "mike_tienoven-org",
+    "updates": {
+      "url": "https://u.expo.dev/8134d887-9ec6-4a36-bc30-76aaf1de2c46"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
