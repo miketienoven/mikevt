@@ -10,6 +10,7 @@ const Avatar = () => {
         'https://raw.githubusercontent.com/alohe/memojis/main/png/2738.png',
         'https://raw.githubusercontent.com/alohe/memojis/main/png/3201.png',
         'https://raw.githubusercontent.com/alohe/memojis/main/png/3359.png',
+        'https://raw.githubusercontent.com/alohe/memojis/main/png/3201.png',
     ]
 
     const randomMemoji = memojiUrls[Math.floor(Math.random() * memojiUrls.length)];
@@ -35,13 +36,13 @@ const styles = StyleSheet.create({
         marginEnd: 40
     },
     circle: {
-        width: 60,
-        height: 60,
+        width: 50,
+        height: 50,
         borderRadius: 50,
         overflow: 'hidden',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'grey'
+        backgroundColor: '#FFC2CE'
     },
     memoji: {
         width: '100%',
