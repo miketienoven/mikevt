@@ -22,6 +22,11 @@ export default function HomeScreen() {
       <ScrollView horizontal style={styles.scrollView}>
         <Avatar />
       </ScrollView>
+      <ScrollView style={styles.scrollView}>
+        <ThemedText type='default' style={styles.headerTitle}>
+          Agenda
+        </ThemedText>
+      </ScrollView>
     </SafeAreaView>
     // <ParallaxScrollView
     //   headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -78,6 +83,9 @@ const styles = StyleSheet.create({
   },
   pageTitle: {
     textAlign: 'center',
+  },
+  headerTitle: {
+    fontSize: 20,
   },
   topBar: {
     flexDirection: 'row',
