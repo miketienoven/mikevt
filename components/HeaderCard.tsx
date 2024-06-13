@@ -16,18 +16,18 @@ function HeaderCard() {
             </View>
             <View style={styles.contentParameters}>
                 <View style={styles.donePar}>
-                    <Text style={styles.cardTextDone}>
-                        <ThemedText type='title' >3 </ThemedText>
+                    <Text style={styles.cardTextStyling}>
+                        <ThemedText type='title' >3 </ThemedText>{"\n"}
                         Gedaan
                     </Text>
                 </View>
-                <Text>
-                    <ThemedText type='title' >2 </ThemedText>
+                <Text style={styles.cardTextStyling}>
+                    <ThemedText type='title' >2 </ThemedText>{"\n"}
                     To-Do
                 </Text>
-                <Text>
-                    <ThemedText type='title' >4 </ThemedText>
-                    Luiste bewoner
+                <Text style={styles.cardTextStyling}>
+                    <ThemedText type='title' >4 </ThemedText>{"\n"}
+                    Luiste {"\n"}bewoner
                 </Text>
             </View>
         </View >
@@ -65,12 +65,16 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
+        textAlign: 'center',
+        marginTop: -5,
     },
-    cardTextDone: {
+    cardTextStyling: {
         color: '#444',
+        textAlign: 'center',
 
     },
     donePar: {
         flexDirection: 'column',
+        textAlign: 'center',
     }
 })
