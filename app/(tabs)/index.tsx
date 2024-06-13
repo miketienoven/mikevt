@@ -21,15 +21,16 @@ export default function HomeScreen() {
         </ThemedText>
         <FontAwesomeIcons name='plus' />
       </View>
-      <ScrollView horizontal style={styles.scrollView}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}
+        style={styles.scrollView}>
         <Avatar />
       </ScrollView>
-      <HeaderCard/>
+      <HeaderCard />
       <ScrollView style={styles.verticalScrollView}>
         <ThemedText type='default' style={styles.headerTitle}>
           Agenda
         </ThemedText>
-        < Schedule/>
+        < Schedule />
       </ScrollView>
     </SafeAreaView>
     // <ParallaxScrollView
@@ -84,8 +85,9 @@ const styles = StyleSheet.create({
   scrollView: {
     // marginHorizontal: 20,
     paddingHorizontal: 30,
-    paddingBottom: 40,
-    maxHeight: 70,
+    paddingBottom: 60,
+
+    maxHeight: 100,
   },
   pageTitle: {
     textAlign: 'center',

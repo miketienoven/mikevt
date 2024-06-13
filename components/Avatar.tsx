@@ -16,14 +16,15 @@ const Avatar = () => {
     const randomMemoji = memojiUrls[Math.floor(Math.random() * memojiUrls.length)];
 
     return (
+
         <View style={styles.container}>
             {memojiUrls.map((url, index) => (
                 <View key={index} style={styles.circle}>
                     <Image style={styles.memoji} source={{ uri: url }}></Image>
-                </View>
+                    
+                </View>   
             ))}
         </View>
-
     )
 }
 
@@ -48,5 +49,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         resizeMode: 'cover'
-    }
+    },
+    text: {
+        fontSize: 18,
+    },
 })
