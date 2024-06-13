@@ -7,6 +7,8 @@ import { ThemedView } from '@/components/ThemedView';
 import Avatar from '@/components/Avatar';
 // import { ScrollView } from 'react-native-reanimated/lib/typescript/Animated';
 import { SafeAreaView, ScrollView, Text, StatusBar } from 'react-native';
+import Schedule from '@/components/Calander';
+import HeaderCard from '@/components/HeaderCard';
 
 export default function HomeScreen() {
   return (
@@ -22,10 +24,12 @@ export default function HomeScreen() {
       <ScrollView horizontal style={styles.scrollView}>
         <Avatar />
       </ScrollView>
-      <ScrollView style={styles.scrollView}>
+      <HeaderCard/>
+      <ScrollView style={styles.verticalScrollView}>
         <ThemedText type='default' style={styles.headerTitle}>
           Agenda
         </ThemedText>
+        < Schedule/>
       </ScrollView>
     </SafeAreaView>
     // <ParallaxScrollView
@@ -79,17 +83,24 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     // marginHorizontal: 20,
-    padding: 20
+    paddingHorizontal: 30,
+    paddingBottom: 40,
+    maxHeight: 70,
   },
   pageTitle: {
     textAlign: 'center',
   },
   headerTitle: {
     fontSize: 20,
+    paddingBottom: 10,
+    paddingHorizontal: 30,
   },
   topBar: {
     flexDirection: 'row',
     padding: 20,
     justifyContent: 'space-between',
+  },
+  verticalScrollView: {
+    backgroundColor: '#F1F8FF',
   }
 });
