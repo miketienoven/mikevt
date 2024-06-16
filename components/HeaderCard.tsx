@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
         shadowColor: '#888',
         shadowOffset: { width: 2, height: 2 },
         shadowRadius: 15,
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.3,
+        marginBottom: 12,
     },
     headerImg: {
         width: 140,
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
     cardTextStyling: {
         color: '#444',
         textAlign: 'center',
-
+        fontSize: 12,
     },
     donePar: {
         flexDirection: 'column',
