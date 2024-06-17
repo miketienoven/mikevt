@@ -27,7 +27,7 @@ function HeaderCard() {
                 </Text>
                 <Text style={styles.cardTextStyling}>
                     <ThemedText type='title' >4 </ThemedText>{"\n"}
-                    Luiste {"\n"}bewoner
+                    De Luiste
                 </Text>
             </View>
         </View >

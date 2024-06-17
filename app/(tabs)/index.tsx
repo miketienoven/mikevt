@@ -33,8 +33,8 @@ export default function HomeScreen() {
           Agenda
         </ThemedText>
         <CalendarRow />
-        <TaskList />
       </View>
+      <TaskList />
     </SafeAreaView>
   );
 }

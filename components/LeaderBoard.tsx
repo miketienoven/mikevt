@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     card: {
         flexDirection: 'row',
-        marginTop: 20,
+        marginTop: 10,
         marginLeft: 48,
     },
     avatar: {
@@ -70,10 +70,10 @@ const styles = StyleSheet.create({
     legenda: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        marginTop: 30,
+        marginTop: 45,
         marginLeft: 140,
         marginRight: 30,
-        paddingBottom: 10,
+        paddingBottom: 15,
     },
     legendaText: {
         fontSize: 10,
