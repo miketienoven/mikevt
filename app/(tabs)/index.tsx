@@ -5,6 +5,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import Avatar from '@/components/Avatar';
+import CalendarRow from '@/components/CalendarRow';
 // import { ScrollView } from 'react-native-reanimated/lib/typescript/Animated';
 import { SafeAreaView, ScrollView, Text, StatusBar } from 'react-native';
 import Schedule from '@/components/Calander';
@@ -21,7 +22,7 @@ export default function HomeScreen() {
         </ThemedText>
         <FontAwesomeIcons name='plus' />
       </View>
-      <ScrollView style={styles.verticalScrollView}>
+      <View style={styles.verticalScrollView}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}
           style={styles.scrollView}>
           <Avatar />
@@ -30,8 +31,9 @@ export default function HomeScreen() {
         <ThemedText type='default' style={styles.headerTitle}>
           Agenda
         </ThemedText>
-        < Schedule />
-      </ScrollView>
+        <CalendarRow />
+        {/* < Schedule /> */}
+      </View>
     </SafeAreaView>
     // <ParallaxScrollView
     //   headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}

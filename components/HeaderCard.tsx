@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         shadowColor: '#888',
         shadowOffset: { width: 2, height: 2 },
         shadowRadius: 15,
-        shadowOpacity: 0.3,
+        shadowOpacity: 0.4,
         marginBottom: 12,
     },
     headerImg: {
