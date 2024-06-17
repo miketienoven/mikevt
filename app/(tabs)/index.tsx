@@ -28,7 +28,7 @@ export default function HomeScreen() {
           style={styles.scrollView}>
           <Avatar />
         </ScrollView>
-        {/* <HeaderCard /> */}
+        <HeaderCard />
         <ThemedText type='default' style={styles.headerTitle}>
           Agenda
         </ThemedText>

@@ -6,6 +6,7 @@ import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import LeaderBoard from '@/components/LeaderBoard';
 
 export default function TabTwoScreen() {
   return (
@@ -13,22 +14,25 @@ export default function TabTwoScreen() {
      <View style={styles.topBar}>
         <FontAwesomeIcons name='minus' />
         <ThemedText type='subtitle' >
-          Taken
+          Bewoners
         </ThemedText>
         <FontAwesomeIcons name='plus' />
       </View>
+      <LeaderBoard />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 30,
-    
+    backgroundColor: '#F1F8FF',
+    flex: 1,
   },
   topBar: {
+    marginHorizontal: 30,
     flexDirection: 'row',
     paddingTop: 20,
     justifyContent: 'space-between',
-  }
+  },
+ 
 });
