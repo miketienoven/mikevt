@@ -9,7 +9,6 @@ const TaskList = () => {
      <TaskItem />
      <TaskItem />
      <TaskItem />
-     <TaskItem />
     </ScrollView>
   )
 }

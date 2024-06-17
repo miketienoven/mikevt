@@ -89,6 +89,6 @@ const styles = StyleSheet.create({
     top: -6,
   },
   todayText: {
-    color: 'black'
+    color: '#267BFA'
   },
 });

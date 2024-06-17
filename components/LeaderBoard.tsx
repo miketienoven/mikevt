@@ -13,13 +13,16 @@ function LeaderBoard() {
                 {[...Array(10)].map((_, index) => (
                     <View style={styles.card} key={index}>
                         <Text style={styles.rank}>{index + 1}</Text>
-                        <View style={styles.innerCard}>
-                            <Image style={styles.avatar} source={require('../assets/images/memojiPic.jpeg')} />
-                            <View style={styles.innerContent}>
-                                <Text>3</Text>
-                                <Text>1</Text>
-                                <Text>32</Text>
+                        <View style={styles.outerCard}>
+                            <View style={styles.innerCard}>
+                                <Image style={styles.avatar} source={require('../assets/images/memojiPic.jpeg')} />
+                                <View style={styles.innerContent}>
+                                    <Text>3</Text>
+                                    <Text>1</Text>
+                                    <Text>32</Text>
+                                </View>
                             </View>
+                            <Text style={styles.label}>Mike</Text>
                         </View>
                     </View>
                 ))}
@@ -42,7 +45,7 @@ const styles = StyleSheet.create({
     },
     card: {
         flexDirection: 'row',
-        marginTop: 10,
+        
         marginLeft: 48,
     },
     avatar: {
@@ -67,6 +70,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         width: 230,
     },
+    label: {
+        marginBottom: 10,
+        marginLeft: 24,
+        marginTop: 3
+    },
     legenda: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
@@ -78,6 +86,7 @@ const styles = StyleSheet.create({
     legendaText: {
         fontSize: 10,
     },
+    outerCard: {},
 });
 
 export default LeaderBoard;
