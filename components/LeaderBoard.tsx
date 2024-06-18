@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, useColorScheme } from 'react-native';
+
+const colorScheme = useColorScheme();
 
 function LeaderBoard() {
     return (
@@ -17,9 +19,9 @@ function LeaderBoard() {
                             <View style={styles.innerCard}>
                                 <Image style={styles.avatar} source={require('../assets/images/memojiPic.jpeg')} />
                                 <View style={styles.innerContent}>
-                                    <Text>3</Text>
-                                    <Text>1</Text>
-                                    <Text>32</Text>
+                                    <Text style={styles.text}>3</Text>
+                                    <Text style={styles.text}>1</Text>
+                                    <Text style={styles.text}>32</Text>
                                 </View>
                             </View>
                             <Text style={styles.label}>Mike</Text>
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         paddingLeft: 4,
         paddingVertical: 4,
-        backgroundColor: '#fff',
+        backgroundColor: colorScheme === 'dark' ? '#3B3B3B' : '#fff',
         borderRadius: 50,
         marginRight: 30,
         alignItems: 'center',
@@ -69,11 +71,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         width: 230,
+        color: colorScheme === 'dark' ? '#000' : '#FFF',
     },
     label: {
         marginBottom: 10,
         marginLeft: 24,
-        marginTop: 3
+        marginTop: 3,
+        color: colorScheme === 'dark' ? '#fff' : '#000',
     },
     legenda: {
         flexDirection: 'row',
@@ -85,8 +89,12 @@ const styles = StyleSheet.create({
     },
     legendaText: {
         fontSize: 10,
+        color: colorScheme === 'dark' ? '#fff' : '#000',
     },
     outerCard: {},
+    text: {
+        color: colorScheme === 'dark' ? '#fff' : '#000',
+    },
 });
 
 export default LeaderBoard;

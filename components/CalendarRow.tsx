@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, useColorScheme } from 'react-native';
 import CalendarStrip from 'react-native-calendar-strip';
 import React, { useState } from 'react';
 import moment from 'moment'
+
+const colorScheme = useColorScheme();
 
 const CustomDateComponent = ({ date, selected, onDateSelected }) => {
   const isSelected = selected ? styles.selectedContainer : null;
@@ -35,7 +37,7 @@ const CalendarRow = () => {
       <CalendarStrip
         style={{ height: 72, paddingBottom: 10 }}
         calendarColor={'transparent'}
-        iconContainer={{ flex: 0.1 }}
+        iconContainer={{ flex: 0.1, }}
         showMonth={false}
         selectedDate={selectedDate}
         onDateSelected={(date) => setSelectedDate(date)}
@@ -79,7 +81,7 @@ const styles = StyleSheet.create({
   dayText: {
     fontSize: 13,
     fontWeight: '500',
-    color: 'black',
+    color: colorScheme === 'dark' ? '#fff' : '#000',
     marginTop: 12,
   },
   selectedText: {

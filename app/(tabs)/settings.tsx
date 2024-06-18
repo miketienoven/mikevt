@@ -1,10 +1,12 @@
 import { Image, StyleSheet, Platform, View, Text } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
 import { ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, useColorScheme } from 'react-native';
 import SettingsHeader from '@/components/SettingsHeader';
 import { FontAwesomeIcons } from '@/components/FontAwesomeIcons'
 
+
+const colorScheme = useColorScheme();
 
 export default function SettingsScreen() {
   return (
@@ -24,8 +26,17 @@ export default function SettingsScreen() {
           <View style={styles.iconContainer}>
             <FontAwesomeIcons style={styles.icon} name='bell' color={'#267BFA'}/>
           </View>
-          <Text>Push meldingen</Text>
-          <FontAwesomeIcons style={styles.arrowsRight} name='arrow-right' />
+          <Text style={styles.text}>Push meldingen</Text>
+          <FontAwesomeIcons style={styles.arrowsRight} name='arrow-right' color={colorScheme === 'dark' ? '#fff' : '#000'} />
+        </View>
+         <Text style={styles.title}>
+          Thema's</Text>
+        <View style={styles.notificatieContainer}>
+          <View style={styles.iconContainerThema}>
+            <FontAwesomeIcons style={styles.icon} name='image' color={'#2ACF00'}/>
+          </View>
+          <Text style={styles.text}>Thema kiezen</Text>
+          <FontAwesomeIcons style={styles.arrowsRight} name='arrow-right' color={colorScheme === 'dark' ? '#fff' : '#000'} />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -40,17 +51,19 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#F1F8FF',
+    backgroundColor:colorScheme === 'dark' ? '#242628' : '#F1F8FF',
     height: 1000,
   },
   title: {
     fontSize: 16,
     marginLeft: 30,
-    marginBottom: 16,
+    marginBottom: 8,
+    marginTop: 16,
     fontWeight: '400',
+    color: colorScheme === 'dark' ? '#fff' : '#000',
   },
   notificatieContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: colorScheme === 'dark' ? '#3B3B3B' : '#fff',
     marginHorizontal: 30,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -64,11 +77,19 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 25,
   },
+  iconContainerThema: {
+    padding: 10,
+    borderRadius: 25,
+    backgroundColor: '#A0FFAF',
+  },
   icon: {
     fontSize: 20,
   },
   arrowsRight: {
     fontSize: 20,
     marginRight: 10,
-  }
+  },
+  text: {
+   color: colorScheme === 'dark' ? '#fff' : '#000'
+  },
 });

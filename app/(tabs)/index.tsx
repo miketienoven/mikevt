@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform, View } from 'react-native';
+import { Image, StyleSheet, Platform, View, useColorScheme } from 'react-native';
 import { FontAwesomeIcons } from '@/components/FontAwesomeIcons'
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -12,16 +12,18 @@ import Schedule from '@/components/Calander';
 import HeaderCard from '@/components/HeaderCard';
 import TaskList from '@/components/TaskList';
 
+const colorScheme = useColorScheme();
+
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.topBar}>
-        <FontAwesomeIcons name='plus' color='#F1F8FF' />
+        <FontAwesomeIcons name='plus' color={colorScheme === 'dark' ? '#242628' : '#F1F8FF'} />
 
         <ThemedText type='subtitle' style={styles.pageTitle}>
           Taken
         </ThemedText>
-        <FontAwesomeIcons name='plus' />
+        <FontAwesomeIcons name='plus' color={colorScheme === 'dark' ? '#fff' : '#000'}/>
       </View>
       <View style={styles.verticalScrollView}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     gap: 8,
     flex: 1,
     paddingTop: StatusBar.currentHeight,
-    backgroundColor: '#F1F8FF'
+    backgroundColor: colorScheme === 'dark' ? '#242628' : '#F1F8FF',
   },
   scrollView: {
     // marginHorizontal: 20,
@@ -68,6 +70,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   verticalScrollView: {
-    backgroundColor: '#F1F8FF',
+    backgroundColor: colorScheme === 'dark' ? '#242628' : '#F1F8FF',
   }
 });

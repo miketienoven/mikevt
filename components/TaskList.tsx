@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, useColorScheme } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native'
 import TaskItem from './TaskItem'
+
+const colorScheme = useColorScheme();
 
 const TaskList = () => {
   return (
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
     height: 800,
     width: 400,
     marginTop: 60,
-    backgroundColor: '#F1F8FF',
+    backgroundColor: colorScheme === 'dark' ? '#242628' : '#F1F8FF',
     marginHorizontal: 30,
   }
 })
